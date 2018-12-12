@@ -1,0 +1,101 @@
+body
+    background-color: #f5f6f7
+    font-family: 'Roboto', sans-serif
+    font-size: 18px
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+.header 
+    height: 100vh
+
+.row
+    display: flex
+    justify-content: center
+    align-items: start
+    height: 100%
+
+.container
+    display: flex
+    justify-content: center
+    width: 100%
+    max-width: 1170px
+    padding: 0 15px
+
+.nav
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: 1025px
+    box-shadow: 0 3px 7px 3px rgba(0, 0, 0, 0.04)
+
+    &-items
+        display: flex
+        justify-content: flex-start
+        padding: 0
+        margin: 0
+        list-style: none
+        padding: 0 50px 0 0
+
+    &-item 
+        display: block
+        padding: 54px 35px 52px 35px
+        color: #23344b
+        letter-spacing: 0.9px
+        text-decoration: none
+        transition: background 0.5s
+        background-image: linear-gradient(to bottom, #454ca7 0%, #2c2e78 100%)
+        background-position-y: center
+        background-repeat: no-repeat
+        background-size: 100% 0%
+        
+        &_active
+            color: #ffffff
+            background-image: linear-gradient(to bottom, #454ca7 0%, #2c2e78 100%)
+            background-size: 100% 100%
+    
+    &-item:hover
+        color: #ffffff
+        background-size: 100% 100%
+
+
+    
+    &-icon
+        text-decoration: none
+        padding: 0 6px
+        position: relative
+        img
+            height: 24px
+    &-menu
+        padding: 0 0 0 50px
+.icon-menu
+    display: none
+ 
+
+.icon-shopping-bag::after
+    content: "0"
+    display: block 
+    position: absolute
+    bottom: 0
+    right: 0
+    text-align: center
+    font-size: 7px
+    padding: 1px 4px
+    color: #ffffff
+    background-image: linear-gradient(to bottom, #454ca7 0%, #2c2e78 100%)
+    border-radius: 10px
+
+@media screen and (max-width: 768px)
+    .nav
+        position: relative
+        &-items
+            display: none
+            flex-flow: column wrap
+            width: 100%
+            top: 10vh
+            position: absolute
+            padding: 0
+    .icon-menu
+        display: inline-block
+

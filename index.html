@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Menu</title>
+    <style>
+        .icon-shopping-bag::after {
+            content: "5"
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="row">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav-items">
+                        <li><a href="#" class="nav-item">Home</a></li>
+                        <li><a href="#" class="nav-item nav-item_active">Product</a></li>
+                        <li><a href="#" class="nav-item">About us</a></li>
+                        <li><a href="#" class="nav-item">Contacts</a></li>
+                    </ul>
+                    <div class="nav-menu">
+                        <a href="#" class="nav-icon icon-menu">
+                            <img src="img/menu.png" alt="search">
+                        </a>
+                        <a href="#" class="nav-icon icon-search">
+                            <img src="img/search.png" alt="search">
+                        </a>
+                        <a href="#" class="nav-icon icon-shopping-bag">
+                            <img src="img/shopping-bag.png" alt="bag">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+        $('.icon-menu').on('click', function() {
+        $('.nav-items').slideToggle(300, function(){
+                if( $(this).css('display') === "none"){
+                    $(this).removeAttr('style');
+                }
+        });
+
+        });
+
+        });
+    </script>
+</body>
+</html>
